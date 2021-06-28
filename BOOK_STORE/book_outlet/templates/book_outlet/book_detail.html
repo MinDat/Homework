@@ -1,0 +1,20 @@
+{% extends "book_outlet/base.html" %}
+
+{% block title %} Book detail {% endblock %}
+
+
+{% block css_files %}
+
+{% endblock %}
+
+
+{% block content %}
+    <h1> {{title}} </h1>
+    <h2>Rating: {{rating}}</h2>
+    <h3>The author of the book is: {{author}}</h3>
+    {% if trending == True %}
+        <h4> This book is the highest selling </h4>
+    {% else %}
+        <h4> Reference </h4>
+    {% endif %}
+{% endblock %}

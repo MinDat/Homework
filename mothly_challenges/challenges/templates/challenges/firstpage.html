@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+
+    {% block title %} Monthly  {% endblock %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "challenges/challenges.css" %}"> </link>
+    <link rel="stylesheet" href="{% static "challenges/challenge.css" %}"> </link>
+{% endblock %}
+
+{% block content %}
+
+    {% include "challenges/includes/include.html" %}
+
+    <h1>Monthly</h1>
+    {% if name != "apr" %}
+        <h2>{{ message | title}}, {{name | title}}</h2>
+    {% else %}
+        <h2>Sorry</h2>
+    {% endif %}
+{% endblock %}
+
